@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Russo+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet"
 </head>
 <body>  
   <header class="header">
@@ -242,22 +243,30 @@
           <a href="#"class="footer__item-text">Контакт</a>
         </div>   
       </div>
-      <div class="footer__container-form">
+      <form class="footer__container-form">
         <h4 class="footer__form-title">узнавай о поступлениях<br>первым!</h4>
-      </div>
+        <input class="footer__form-email" type="text" name="" value="введите ваш e-mail">
+        <span>выберите рассылку</span> <br>
+        <div class="checkbox"><input  type="checkbox"> 
+          <span>Первая компания</span> 
+        </div> 
+        <a href="#" class="form__button"><span>ПОДПИСАТЬСЯ</span></a>
+      </form>
     </div>
     <div class="footer__under">
-      <div class="footer__under-container">
-        <span>© Металл Тула, 2020</span>
-        <span>ИНН: 7107131023</span>
-        <span>ОГРН: 1197154002210</span>
+        <div class="footer__under-content">
+          <div class="footer__under-container">
+            <span class="footer__under-text">© Металл Тула, 2020</span>
+            <span>ИНН: 7107131023</span>
+            <span>ОГРН: 1197154002210</span>
+          </div>
+          <div class="footer__payments">
+            <img src="images/paykeeper.png" alt="" height="60px">
+            <img src="images/Mir.png" alt="" height="40px">
+            <img src="images/visafooter.png" alt="" height="40px">
+            <img src="images/mastercard.png" alt="" height="40px">
+          </div>  
       </div>
-      <div class="footer__payments">
-        <div class="footer__pay-pic1"></div>
-        <div class="footer__pay-pic2"></div>
-        <div class="footer__pay-pic3"></div>
-        <div class="footer__pay-pic4"></div>
-      </div>  
     </div> 
   </footer>
 </body>
