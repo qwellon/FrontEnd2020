@@ -30,3 +30,65 @@ body {
 	display: block;
 	background: url(../images/Logo.svg);
 }
+.navigation {
+	width: 100%;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #DADADA;
+	box-sizing: border-box;
+	box-shadow: 0px 2px 4px rgba(61, 61, 64, 0.1);
+}
+.navigation__container {
+	display: flex;
+	width: 1200px;
+	align-items: center;
+}
+.navigation__catalog {
+	display: flex;
+	align-items: center;
+	margin-left: 0;
+	display: block;
+	box-shadow: 0px 2px 4px;
+
+}
+.navigation__flag {
+	margin-right: 0px;
+	margin-left: 15px;
+}
+.navigation__container a {
+	font-family: Source Sans Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 22px;
+	text-transform: uppercase;
+	color: #034580;
+	margin-left: 15px;
+	margin-right: 15px;
+	display: block;
+	height: 100%;
+
+}
+
+/*.navigation__container a:hover {
+	border: 1px solid #DADADA;
+	box-shadow: 0px 2px 4px 
+} */
+.under-nav {
+	width: 1200px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+}
+.under-nav a {
+	font-family: Source Sans Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 18px;
+	letter-spacing: -0.48px;
+	color: #56565A;
+	margin-right: 7px;
+}
