@@ -1,4 +1,4 @@
-* {
+вв* {
 	box-sizing: border-box; 
 }
 
@@ -95,4 +95,5 @@ body {
 }
 .content-container {
 	width: 940px;
+	display: flex;
 }
