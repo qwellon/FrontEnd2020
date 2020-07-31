@@ -183,7 +183,16 @@ h2 {
 	height: 429px;
 	background: #6E4AC3;
 	position: relative;
+	z-index: 5;
+	margin-top: 30px;
 
+}
+.allstars__upper-block {
+	width: 100%;
+	height: 55px;
+	position: absolute;
+	background: #FFFFFF;
+	top: 0;
 }
 .allstars img {
 	position: absolute;
@@ -214,7 +223,7 @@ h2 {
 } 
 .allstars__container h2 {
 	color: #FFFFFF;
-	margin-top: 75px;
+	margin-top: 130px;
 	margin-bottom: 10px;
 }
 
@@ -224,7 +233,7 @@ h2 {
 	margin: 10px auto;
 	font-family: Source Sans Pro;
 	font-style: normal;
-	font-weight: 600;
+	font-weight: normal;
 	font-size: 16px;
 	line-height: 22px;
 	text-align: center;
@@ -233,13 +242,16 @@ h2 {
 .allstars__container .button {
 	margin-top: 20px;
 }
+
 .join {
-	width: 1200px;
+	width: 100%;
 	height: 321px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	z-index: 5;
+	background-color: white;
 }
 .join__title {
 	font-family: Roboto Condensed;
@@ -311,7 +323,6 @@ h2 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-image: url(..);
 }
 .how__content {
 	width: 922px;
@@ -328,6 +339,7 @@ h2 {
 }
 .how__title {
 	color: white;
+	margin-bottom: 20px;
 }
 .how__text {
 	font-family: Source Sans Pro;
@@ -336,7 +348,35 @@ h2 {
 	font-size: 16px;
 	line-height: 22px;
 	color: #FFFFFF;
+	margin-bottom: 40px;
 }
 .how .button {
 	width: 260px;
+}
+.howbg1 {
+	position: absolute;
+	margin-left: 500px;
+	bottom: 60px;
+}
+.howbg2 {
+	position: absolute;
+	margin-left: -630px;
+	bottom: 180px;
+}
+.que:before  {
+	content: "";
+	position: absolute;
+	background: url(../images/que.svg) no-repeat;
+	width: 67px;
+	height: 67px;
+	margin-left: -100px;
+}
+
+.plus:before  {
+	content: "";
+	position: absolute;
+	background: url(../images/plus.svg) no-repeat;
+	width: 67px;
+	height: 67px;
+	margin-left: -100px;
 }
