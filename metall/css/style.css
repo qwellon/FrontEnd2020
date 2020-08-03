@@ -371,7 +371,10 @@ h1 {
 
 }
 .catalog__item:hover {
-	background: rgba(255, 255, 255, 1);
+	background: #FF4545;
+}
+.catalog__item:hover span {
+	color: white;
 }
 .catalog__item span {
 	display: block;
@@ -613,13 +616,13 @@ h1 {
 	display: flex;
 	min-width: 277px;
 	align-items: center;
+	margin-bottom: 40px;
 }
 .contacts__item-pic1 {
 	width: 36px;
 	height: 36px;
 	background:url(../images/phonecontact.png);
 	margin-right: 10px; 
-	margin-bottom: 40px;
 }
 .contacts__item-text {
 	font-family: Open Sans;
@@ -636,14 +639,12 @@ h1 {
 	height: 42px;
 	background:url(../images/pointcontact.png); 
 	margin-right: 15px;
-	margin-bottom: 44px;
 }
 .contacts__item-pic3 {
 	width: 36px;
 	height: 36px;
 	background:url(../images/wtchcontact.png); 
 	margin-right: 9px;
-	margin-bottom: 40px;
 }
 .contacts__item-pic4 {
 	width: 37px;
