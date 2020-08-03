@@ -275,6 +275,7 @@ h1 {
 	width: 1030px;
 	display: flex;
 	justify-content: space-between;
+	margin-left: 70px;
 }
 .large-assortment__carusel img {
 display: block;
