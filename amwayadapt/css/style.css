@@ -337,6 +337,7 @@ h2 {
 	flex-direction: column;
 	z-index: 3;
 }
+
 .how__title {
 	color: white;
 	margin-bottom: 20px;
@@ -350,9 +351,7 @@ h2 {
 	color: #FFFFFF;
 	margin-bottom: 40px;
 }
-.how .button {
-	width: 260px;
-}
+
 .howbg1 {
 	position: absolute;
 	margin-left: 500px;
@@ -379,4 +378,10 @@ h2 {
 	width: 67px;
 	height: 67px;
 	margin-left: -100px;
+}
+.button__page {
+	width: 230px;
+}
+.button__instruction {
+	width: 261px;
 }
