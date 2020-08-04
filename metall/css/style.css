@@ -276,9 +276,29 @@ h1 {
 	display: flex;
 	justify-content: space-between;
 	margin-left: 70px;
+	margin-top: 80px;
 }
 .large-assortment__carusel img {
-display: block;
+	display: block;
+}
+.large-assortment__dots {
+	width: 100px;
+	color: green;
+	display: flex;
+	justify-content: space-between;
+
+}
+.dot {
+	display: block;
+	font-size: 46px;
+	color: #A8A8A8;
+}
+.dot:hover {
+	color: grey;
+}
+.dot-active {
+	color: red;
+	font-size: 46px;
 }
 
 .announcement {
@@ -520,6 +540,9 @@ display: block;
 }
 .special__button:hover span {
 	color: red;
+}
+.special__carusel {
+	margin-top: 50px;
 }
 
 .metall-tula {
