@@ -192,7 +192,10 @@ body {
 		top: 0;
 	}
 	.allstars img {
-		position: absolute;
+		position: absolute;	
+	}
+	.button img {
+		position: static;
 	}
 	.allstars__likebg {
 		left: 0;
@@ -351,12 +354,12 @@ body {
 
 	.howbg1 {
 		position: absolute;
-		margin-left: 500px;
+		margin-left: 950px;
 		bottom: 60px;
 	}
 	.howbg2 {
 		position: absolute;
-		margin-left: -630px;
+		margin-left: -1250px;
 		bottom: 180px;
 	}
 	.que:before  {
