@@ -11,3 +11,138 @@ body {
 	align-items: center;
 	flex-direction: column;
 }
+header {
+	width: 1170px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+}
+@media all and (max-width: 1170px) {
+	header {
+		width: 100%;
+	}
+}
+@media all and (max-width: 768px) {
+	header {
+		width: 100%;
+	}
+}
+.logo {
+	display: block;
+	width: 69px;
+	height: 53px;
+	background:  url('../images/Shefs_club_logo.svg') 0 0/100% auto no-repeat;
+	margin-left: 13px;
+}
+@media all and (max-width: 768px) {
+	.logo {
+		min-width: 59px;
+		min-height: 45px;
+	}
+}
+.header__description {
+	margin-left: 23px;
+	width: 164px;
+	font-family: Circe;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	display: flex;
+	align-items: center;
+	color: #333333;
+}
+@media all and (max-width: 1170px) {
+	.header__description {
+		display: none;
+	}
+}
+.header__navigation {
+	width: 325px;
+	display: flex;
+	justify-content: space-between;
+	margin-left: 154px;
+}
+@media all and (max-width: 1170px) {
+	.header__navigation	{
+		width: 265px;
+		margin-left: 46px;
+	}
+}
+@media all and (max-width: 768px) {
+	.header__navigation	{
+	display: none;
+}
+}
+.header__nav-text {
+	font-family: Circe;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	text-align: center;
+	color: #333333;
+}
+.header__phone {
+	margin-left: 112px;
+	font-family: Circe;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 24px;
+	color: #333333;
+}
+@media all and (max-width: 1170px) {
+	.header__phone {
+		margin-left: 48px;
+	}
+}
+@media all and (max-width: 768px) {
+	.header__phone span {
+		display: none;
+	}
+	.header__phone {
+		display: block;
+		min-width: 40px;
+		min-height: 40px;
+		background: url(../images/phone.svg) 0 0/100% auto no-repeat;
+	}
+}
+.header__login {
+	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 130px;
+	height: 40px;
+	margin-left: 30px;
+	background: #FAFAFA;
+	border-radius: 134px;
+}
+@media all and (max-width: 1170px) {
+	.header__login {
+		margin-left: 20px;
+	}
+}
+@media all and (max-width: 768px) {
+	.header__login-text {
+		display: none;
+	}
+	.header__login {
+		display: block;
+		min-width: 40px;
+		min-height: 40px;
+		background: url(../images/login gpic.svg) 0 0/100% auto no-repeat;
+	}
+	.header__login img {
+		display: none;
+	}
+}
+.header__login-text {
+	font-family: Circe;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	color: #333333;	
+}
