@@ -440,9 +440,17 @@ header {
 }
 
 .banner__slider a {
-	background: #FFFFFF;
+	color: #FFFFFF;
 	opacity: 0.5;
+	font-size: 50px;
 }
 .banner__slider-active {
 	opacity: 1;
+	font-size: 70px;
+}
+@media all and (max-width: 768px) {
+	.banner__slider {
+		display: none;
+	}
+	
 }
