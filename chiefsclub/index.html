@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>ШЕФС Клаб</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css">
@@ -48,7 +49,7 @@
       </a>
     </div>
     <div class="banner__slider ">
-      <a href="#"class="banner__slider-active"><span>&bull;</span></a>
+      <a href="#" class="banner__slider-active"><span>&bull;</span></a>
       <a href="#"><span>&bull;</span></a>
       <a href="#"><span>&bull;</span></a>
       <a href="#"><span>&bull;</span></a>
@@ -56,107 +57,113 @@
   </section>
   <section class="howitworks">
     <h2 class="title">Как это работает</h2>
-    <div class="howitworks__content">
-      <div class="howitworks__container">
-        <img src="images/how1.svg" alt="">
-        <h3 class="howitworks__title">Выбирайте меню и блюда</h3>
-        <p class="howitworks__text">Каждую неделю 60 новых рецептов от шеф-поваров и диетологов</p>
-      </div>
-      <div class="howitworks__container">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-lg-3 col-md-4 howitworks__container">
+         <img src="images/how1.svg" alt="">
+         <h3 class="howitworks__title">Выбирайте меню и блюда</h3>
+         <p class="howitworks__text">Каждую неделю 60 новых рецептов от шеф-поваров и диетологов</p>
+       </div>
+       <div class="col-sm-12 col-lg-3 col-md-4 howitworks__container">
         <img src="images/how2.svg" alt="">
         <h3 class="howitworks__title">Получайте свежие продукты</h3>
         <p class="howitworks__text">Ингредиенты расфасованы под рецепты, доставка бесплатна</p>
       </div>
-      <div class="howitworks__container">
-        <img src="images/how3.svg" alt="">
-        <h3 class="howitworks__title">Готовьте за 15-40 минут</h3>
-        <p class="howitworks__text">С пошаговыми фоторецептами и подготовленными продуктами</p>
-      </div>
-      <div class="howitworks__container">
+      <div class="col-sm-12 col-lg-3 col-md-4 howitworks__container">
         <img src="images/how4.svg" alt="">
         <h3 class="howitworks__title">Оформите подписку</h3>
         <p class="howitworks__text">Настройте график доставок и получайте продукты со скидкой</p>
+
+      </div>
+      <div class="col-sm-12 col-lg-3 col-md-4 howitworks__container">
+
+        <img src="images/how3.svg" alt="">
+        <h3 class="howitworks__title">Готовьте за 15-40 минут</h3>
+        <p class="howitworks__text">С пошаговыми фоторецептами и подготовленными продуктами</p>
+
       </div>
     </div>
-  </section>
-  <section class="menu">
-    <img src="images/menuleftarrow.svg" alt="" class="menu__leftarrow1">
-    <img src="images/menuleftarrow.svg" alt="" class="menu__leftarrow2">
-    <img src="images/menurightarrow.svg" alt="" class="menu__leftarrow3">
-    <img src="images/menurightarrow.svg" alt="" class="menu__leftarrow4">
-    <h2 class="menu__title">Меню на 28 мая - 3 июня</h2>
-    <span class="menu__info">Доставка этого меню доступна только с 28 мая по 3 июня</span>
-    <div class="menu__buttons">
-      <a href="#" class="menu__button">Завтраки</a>
-      <a href="" class="menu__button">Обеды (супы)</a>
-      <a href="" class="menu__button">Ужин</a>
-      <a href="" class="menu__button">ЗОЖ/ПП</a>
-      <a href="" class="menu__button">Veggie</a>
+  </div>
+  
+</section>
+<section class="menu">
+  <img src="images/menuleftarrow.svg" alt="" class="menu__leftarrow1">
+  <img src="images/menuleftarrow.svg" alt="" class="menu__leftarrow2">
+  <img src="images/menurightarrow.svg" alt="" class="menu__leftarrow3">
+  <img src="images/menurightarrow.svg" alt="" class="menu__leftarrow4">
+  <h2 class="menu__title">Меню на 28 мая - 3 июня</h2>
+  <span class="menu__info">Доставка этого меню доступна только с 28 мая по 3 июня</span>
+  <div class="menu__buttons">
+    <a href="#" class="menu__button">Завтраки</a>
+    <a href="" class="menu__button">Обеды (супы)</a>
+    <a href="" class="menu__button">Ужин</a>
+    <a href="" class="menu__button">ЗОЖ/ПП</a>
+    <a href="" class="menu__button">Veggie</a>
+  </div>
+  <div class="menu__content">
+    <div class="menu__container">
+      <div class="menu__content-tag"><span>4 – 7</span></div> 
+      <img src="images/menuimg1.jpg" alt="">
+      <div class="menu__container-tags">
+        <a href="#" class="menu__tags-item"><span>#Обеды (супы)</span></a>
+        <a href="#" class="menu__tags-item"><span>#ЗОЖ/ПП</span></a>
+        <a href="#" class="menu__tags-item"><span>#Veggie</span></a>
+      </div>
+      <h3 class="menu__container-title">Шпинатные тальятелле с тигровыми креветками в соусе песто россо с кремом из баклажана</h3>
+      <div class="menu__wish">
+        <a href="#" class="menu__wish-item1">Готовить легко</a>
+        <span>Готовить на <b>1 - 2 день</b></span>  
+      </div>
+      <div class="menu__line"></div>
+      <div class="menu__info">
+        <span>340 г</span>
+        <span>25 мин</span>
+        <a href="#" class="menu__info-check"><span>Выбрано</span></a>????????????????????????????????????????????????? 
+      </div>     
     </div>
-    <div class="menu__content">
-      <div class="menu__container">
-        <div class="menu__content-tag"><span>4 – 7</span></div> 
-        <img src="images/menuimg1.jpg" alt="">
-        <div class="menu__container-tags">
-          <a href="#" class="menu__tags-item"><span>#Обеды (супы)</span></a>
-          <a href="#" class="menu__tags-item"><span>#ЗОЖ/ПП</span></a>
-          <a href="#" class="menu__tags-item"><span>#Veggie</span></a>
-        </div>
-        <h3 class="menu__container-title">Шпинатные тальятелле с тигровыми креветками в соусе песто россо с кремом из баклажана</h3>
-        <div class="menu__wish">
-          <a href="#" class="menu__wish-item1">Готовить легко</a>
-          <span>Готовить на <b>1 - 2 день</b></span>  
-        </div>
-        <div class="menu__line"></div>
-        <div class="menu__info">
-          <span>340 г</span>
-          <span>25 мин</span>
-          <a href="#" class="menu__info-check"><span>Выбрано</span></a>????????????????????????????????????????????????? 
-        </div>     
+    <div class="menu__container">
+      <div class="menu__content-tag"><span>4 – 7</span></div> 
+      <img src="images/menuimg2.jpg" alt="">
+      <div class="menu__container-tags">
+        <a href="#" class="menu__tags-item"><span>#Обеды (супы)</span></a>
+        <a href="#" class="menu__tags-item"><span>#ЗОЖ/ПП</span></a>
+        <a href="#" class="menu__tags-item"><span>#Veggie</span></a>
       </div>
-      <div class="menu__container">
-        <div class="menu__content-tag"><span>4 – 7</span></div> 
-        <img src="images/menuimg2.jpg" alt="">
-        <div class="menu__container-tags">
-          <a href="#" class="menu__tags-item"><span>#Обеды (супы)</span></a>
-          <a href="#" class="menu__tags-item"><span>#ЗОЖ/ПП</span></a>
-          <a href="#" class="menu__tags-item"><span>#Veggie</span></a>
-        </div>
-        <h3 class="menu__container-title">Шпинатные тальятелле с тигровыми креветками в соусе песто россо с кремом из баклажана</h3>
-        <div class="menu__wish">
-          <a href="#" class="menu__wish-item1">Готовить легко</a>
-          <span>Готовить на <b>1 - 2 день</b></span>  
-        </div>
-        <div class="menu__line"></div>
-        <div class="menu__info">
-          <span>340 г</span>
-          <span>25 мин</span>
-          <a href="#" class="menu__info-check"><span>Выбрано</span></a>????????????????????????????????????????????????? 
-        </div>     
+      <h3 class="menu__container-title">Шпинатные тальятелле с тигровыми креветками в соусе песто россо с кремом из баклажана</h3>
+      <div class="menu__wish">
+        <a href="#" class="menu__wish-item1">Готовить легко</a>
+        <span>Готовить на <b>1 - 2 день</b></span>  
       </div>
-      <div class="menu__container">
-        <div class="menu__content-tag"><span>4 – 7</span></div> 
-        <img src="images/menuimg3.jpg" alt="">
-        <div class="menu__container-tags">
-          <a href="#" class="menu__tags-item"><span>#Обеды (супы)</span></a>
-          <a href="#" class="menu__tags-item"><span>#ЗОЖ/ПП</span></a>
-          <a href="#" class="menu__tags-item"><span>#Veggie</span></a>
-        </div>
-        <h3 class="menu__container-title">Шпинатные тальятелле с тигровыми креветками в соусе песто россо с кремом из баклажана</h3>
-        <div class="menu__wish">
-          <a href="#" class="menu__wish-item1">Готовить легко</a>
-          <span>Готовить на <b>1 - 2 день</b></span>  
-        </div>
-        <div class="menu__line"></div>
-        <div class="menu__info">
-          <span>340 г</span>
-          <span>25 мин</span>
-          <a href="#" class="menu__info-check"><span>Выбрано</span></a>????????????????????????????????????????????????? 
-        </div>     
-      </div>
-      <div class="menu__container"></div>
-      <div class="menu__container"></div>
+      <div class="menu__line"></div>
+      <div class="menu__info">
+        <span>340 г</span>
+        <span>25 мин</span>
+        <a href="#" class="menu__info-check"><span>Выбрано</span></a>????????????????????????????????????????????????? 
+      </div>     
     </div>
-  </section>
+    <div class="menu__container">
+      <div class="menu__content-tag"><span>4 – 7</span></div> 
+      <img src="images/menuimg3.jpg" alt="">
+      <div class="menu__container-tags">
+        <a href="#" class="menu__tags-item"><span>#Обеды (супы)</span></a>
+        <a href="#" class="menu__tags-item"><span>#ЗОЖ/ПП</span></a>
+        <a href="#" class="menu__tags-item"><span>#Veggie</span></a>
+      </div>
+      <h3 class="menu__container-title">Шпинатные тальятелле с тигровыми креветками в соусе песто россо с кремом из баклажана</h3>
+      <div class="menu__wish">
+        <a href="#" class="menu__wish-item1">Готовить легко</a>
+        <span>Готовить на <b>1 - 2 день</b></span>  
+      </div>
+      <div class="menu__line"></div>
+      <div class="menu__info">
+        <span>340 г</span>
+        <span>25 мин</span>
+        <a href="#" class="menu__info-check"><span>Выбрано</span></a>????????????????????????????????????????????????? 
+      </div>     
+    </div>
+    <div class="menu__container"></div>
+    <div class="menu__container"></div>
+  </div>
+</section>
 </body>
 </html>
