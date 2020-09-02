@@ -8,7 +8,23 @@ a, a:hover {
 }
 
 body {
-		background-color: black;
+		background-color: #333333;
+		min-width: 320px;
+}
+.header {
+	background-image: url('../images/header-bg.jpg');
+	height: 1045px;
+}
+@media all and (max-width: 992px) {
+	.header {
+		height: 800px;
+	}
+}
+
+@media all and (max-width: 768px) {
+	.header {
+		height: 600px;
+	}
 }
 .header__nav {
 	justify-content: space-between;
@@ -34,10 +50,6 @@ body {
 	text-transform: uppercase;
 	color: #FFFFFF;
 }
-.container {
-	width: 1110px;
-}
-
 .fixed-panel {
 	width: 150px;
 	height: 1045px;
@@ -57,7 +69,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	flex-direction: column;
-	margin-top: 379px;
+	margin-top: 200px;
 }
 .fixed-panel__title {
 	font-family: Open Sans Condensed;
@@ -97,11 +109,14 @@ body {
 	color: #FFFFFF;
 	margin-top: 308px;
 }
+@media all and (max-width: 768px) {
+	.afisha__title {
+		margin-top: 114px;
+	}
+}
 .afisha__text {
-	width: 540px;
+	max-width: 540px;
 	height: 79px;
-	left: 405px;
-	top: 502px;
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: normal;
@@ -159,4 +174,52 @@ body {
 }
 .afisha__slider {
 	margin-top: 30px;
+}
+
+.about__title {
+	font-family: Open Sans Condensed;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 48px;
+	line-height: 65px;
+	text-align: center;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	margin: 0 auto;
+	margin-top: 150px;
+	margin-bottom: 100px;
+}
+.about__title span, .about__info span {
+	color: #D1A954;
+}
+
+.about__item-title {
+	font-family: Open Sans Condensed;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 29px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	margin-bottom: 40px;
+}
+.about__text {
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 150%;
+	color: #FFFFFF;
+}
+.about__info {
+	font-family: Open Sans Condensed;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 22px;
+	letter-spacing: 0.05em;
+	color: #FFFFFF;
+	margin-top: 15px;
 }
