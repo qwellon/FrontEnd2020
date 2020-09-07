@@ -130,7 +130,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: absolute;
+	
 	width: 160px;
 	height: 50px;
 	background: #D1A954;
@@ -222,4 +222,138 @@ body {
 	letter-spacing: 0.05em;
 	color: #FFFFFF;
 	margin-top: 15px;
+}
+.awards {
+	margin-top: 150px;
+}
+.awards__content {
+	background: url(../images/awardsbg.jpg) no-repeat;
+	background-height: 100%;
+	height: 550px;
+}
+.awards__years {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 298px;
+}
+.awards__years span {
+	font-family: Open Sans Condensed;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 72px;
+	line-height: 98px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #D1A954;
+}
+.awards__info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	height: 195px;
+	margin-left: 103px;
+}
+
+.awards__info p {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 150%;
+	color: #FFFFFF;
+	margin-top: 25px;
+
+}
+@media all and (max-width: 992px) {
+	.awards__info p {
+	font-size: 34px;
+	
+	}
+	.awards__info {
+		margin-left: 54px;
+	}
+}	
+	@media all and (max-width: 768px) {
+	.awards__info p {
+		font-size: 29px;
+		
+	}
+}
+@media all and (max-width: 576px) {
+	.awards__info p {
+	font-size: 25px;
+	
+	}
+	.awards__info {
+		margin-left: 24px;
+	}
+}
+
+}
+.awards__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+@media screen and (max-width: 576px) {
+	.about__text {
+		text-align: center;
+	}
+}
+
+.partners__gazprom {
+	margin-bottom: 20px;
+}
+
+.support__contacts-item {
+	font-family: Open Sans Condensed;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 22px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	margin-bottom: 20px;
+}
+.support__form {
+	background: #444444;
+	color: #989898;
+	border: 1px solid #616161;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+}
+.support__mas {
+	height: 100px;
+}
+.support__info {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 150%;
+	color: #989898;
+}
+.support__button {
+	margin-top: 0px;
+	margin-bottom: 30px;
+}
+.text-align-right {
+	text-align: right;
+
+}
+.support__contacts-under {
+	margin-top: 80px;
+}
+
+@media all and (max-width: 768px) {
+	.support__button {
+	margin: 0 auto;
+}
+	.support__info-under {
+		margin-top: 50px;
+	}
+	
 }
