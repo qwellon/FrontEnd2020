@@ -224,12 +224,13 @@ body {
 	margin-top: 15px;
 }
 .stages__container {
-	min-width: 1770px;
+	
 	margin-left: 8%;
+	overflow: hidden;
 }
 .stages__item {
 	display: block;
-	width: 442px;
+	min-width: 442px;
 	height: 550px;
 	position: relative;
 }
