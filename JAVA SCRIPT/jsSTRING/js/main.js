@@ -71,5 +71,5 @@ function paliCheck(str) {
         alert('Не палиндром')
     }
 }
-//paliCheck('ojojos');
+// paliCheck('ojojos');
 
