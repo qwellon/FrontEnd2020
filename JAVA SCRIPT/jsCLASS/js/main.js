@@ -48,7 +48,7 @@ class User {
         }
     }
     get name() {
-        return this.name;
+        return this._name;
     }
 
     set bill(val) {
@@ -59,11 +59,11 @@ class User {
         }
     }
     get bill() {
-        return this.bill;
+        return this._bill;
     }
 }
 
-let user1 = new User('Stas', 'Kon', 300);
+let user1 = new User('S', 'Kon', 'q300');
 /*user1.name = 'Stas';
 user1.surname = 'Kon';
 user1.bill = 300;*/
