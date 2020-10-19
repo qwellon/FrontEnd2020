@@ -1,0 +1,102 @@
+<script>
+  //1.
+  let a = [];
+  let b = ['item1', 'item2', 'item3', 'item4']
+  a = b.slice();
+  let c;
+  for (let i = 0, j = a.length - 1; i < j; i++, j--) {
+    c = a[j];
+    a[j] = a[i];
+    a[i] = c;
+  }
+  document.write(a + '<br>');
+
+
+
+  //2.
+
+  let items = [
+    { id: 1, sum: 12 },
+    { id: 2, sum: 18 },
+    { id: 3, sum: 1 },
+    { id: 4, sum: -2 },
+    { id: 5, sum: 12 },
+    { id: 6, sum: 6 },
+    { id: 7, sum: 8 },
+    { id: 8, sum: 104 },
+    { id: 9, sum: 13 },
+    { id: 10, sum: 23 },
+    { id: 11, sum: 2 },
+  ];
+  //document.write(items + '<br>');
+  let items2 = items;
+
+  items2.sort(function (a, b) {
+    return b.sum - a.sum;
+  })
+  console.log(items2);
+
+  function sumItems2(items2) {
+
+    let sum = 0;
+    for (let items of Object.values(items2.sum)) {
+      sum += items;
+    }
+    return sum;
+
+  }
+
+
+  //3.
+  class Worker {
+    constructor(name, surname, rate, days) {
+      this.name = name;
+      this.surname = surname;
+      this.rate = rate;
+      this.days = days;
+    }
+
+
+    set name(val) {
+      if (val.length < 2) {
+        alert('Нужно больше символов');
+      } else {
+        this._name = val;
+      }
+    }
+    get name() {
+      return this._name;
+    }
+
+    set rate(val) {
+      if (typeof val == 'number' || val >= 0) {
+        this._rate = val;
+      } else {
+        alert('Неверное значение!');
+      }
+    }
+    get rate() {
+      return this._rate;
+    }
+
+
+    set days(val) {
+      if (typeof val == 'number' || val >= 0) {
+        this._days = val;
+      } else {
+        alert('Неверное значение!');
+      }
+    }
+    get days() {
+      return this._days;
+    }
+
+    getSalary() {
+      document.write('Зарплата работника: ' + (this.rate * this.days));
+    }
+  }
+
+  let worker1 = new Worker('Stanislav', 'Kon', '300', '66');
+  worker1.getSalary();
+
+</script>
