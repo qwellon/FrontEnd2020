@@ -36,15 +36,19 @@
   })
   console.log(items2);
 
-  function sumItems2(items2) {
-
+  function sumArray(arr) {
     let sum = 0;
-    for (let items of Object.values(items2.sum)) {
+    for (let i = 0; i < array.length; i++) {
+      sum += arr[i].sum;
+    }
+    console.log(sum);
+    /*for (let items of Object.values(x.sum)) {
       sum += items;
     }
-    return sum;
-
+    return sum;*/
   }
+
+  sumArray(items2);
 
 
   //3.
@@ -98,38 +102,38 @@
 
   let worker1 = new Worker('Stanislav', 'Kon', '300', '66');
   worker1.getSalary();
-  
+
   //4
-  
+
   let string = "qwert zxc";
 
 
-class MyString {
+  class MyString {
     reverse(string) {
-        return string.split("").reverse();
+      return string.split("").reverse().join("");
     }
 
     ucFirst(string) {
-        let newString = string[0].toUpperCase() + string.slice(1);
-        return newString;
+      let newString = string[0].toUpperCase() + string.slice(1);
+      return newString;
     }
 
     ucWords(string) {
-        let newString = [];
-        let arr = string.split(" ");
-        for (let i = 0; i < arr.length; i++) {
-            let word = arr[i][0].toUpperCase() + arr[i].slice(1);
-            newString.push(word);
-        }
-        return newString.join(" ");
+      let newString = [];
+      let arr = string.split(" ");
+      for (let i = 0; i < arr.length; i++) {
+        let word = arr[i][0].toUpperCase() + arr[i].slice(1);
+        newString.push(word);
+      }
+      return newString.join(" ");
     }
-    
-}
 
-let one = new MyString();
-console.log(one.reverse(string));
-console.log(one.ucFirst(string));
-console.log(one.ucWords(string));
+  }
+
+  let one = new MyString();
+  console.log(one.reverse(string));
+  console.log(one.ucFirst(string));
+  console.log(one.ucWords(string));
 
 
 </script>
