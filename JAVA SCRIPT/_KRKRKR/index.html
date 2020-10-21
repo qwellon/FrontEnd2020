@@ -98,5 +98,38 @@
 
   let worker1 = new Worker('Stanislav', 'Kon', '300', '66');
   worker1.getSalary();
+  
+  //4
+  
+  let string = "qwert zxc";
+
+
+class MyString {
+    reverse(string) {
+        return string.split("").reverse();
+    }
+
+    ucFirst(string) {
+        let newString = string[0].toUpperCase() + string.slice(1);
+        return newString;
+    }
+
+    ucWords(string) {
+        let newString = [];
+        let arr = string.split(" ");
+        for (let i = 0; i < arr.length; i++) {
+            let word = arr[i][0].toUpperCase() + arr[i].slice(1);
+            newString.push(word);
+        }
+        return newString.join(" ");
+    }
+    
+}
+
+let one = new MyString();
+console.log(one.reverse(string));
+console.log(one.ucFirst(string));
+console.log(one.ucWords(string));
+
 
 </script>
