@@ -2,7 +2,7 @@ a:hover {
     text-decoration: none;
 }
 body {
-    background: #ccf2ff;
+    background: url('../images/abstract-seamless-pattern-with-winter-forest-background_1015-1672.jpg');
 }
 .button {
     display: flex;
@@ -35,12 +35,13 @@ body {
 }
 
 .click__form {
-    width: 210px;
+    width: 310px;
     height: 180px;
     background: cadetblue;
     position: absolute;
     top: 30%;
-    left: 45%;
+    left: 42%;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,7 +71,7 @@ body {
     height: 24px;
 }
 .form__text {
-    width: 150px;
+    width: 250px;
     border: 0px;
     border-radius: 5px;
 }
