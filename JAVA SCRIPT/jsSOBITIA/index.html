@@ -19,17 +19,20 @@
     <span>войти</span>
   </a>
   <div class="click__bg"></div>
-  <div class="click__form">
+  <form onsubmit="submitEvent()" class="click__form">
     <a href="#" class="form__close" onclick="displayNone()"></a>
-    <!--<p class="form__close" onclick="displayNone()">X</p>-->
-    <input class="form__mg form__text" type="text" placeholder="Е-mail">
-    <input class="form__mg form__text" type="text" placeholder="Пароль">
+    <span class="form__prompt-phone">Введите номер мобильного телефона</span>
+    <input class="form__mg form__text click__phonenum" type="text" placeholder="Номер телефона"
+      onfocus="displayPromptPhone()">
+    <span class="form__prompt-password">Введите пароль</span>
+    <input class="form__mg form__text click__password" type="text" placeholder="Пароль"
+      onfocus="displayPromptPassword()">
     <input class="form__mg form__submit" type="submit" value="Вход">
 
-  </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/slick.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
 
 </body>
 
