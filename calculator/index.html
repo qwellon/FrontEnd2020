@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <div class="row d-flex justify-content-between mb-1">
+          <input type="button" value="C" onclick="reset()" class="col-3 reset">
+          <input type="textfield" name="solution" class="col-9 solution">
+        </div>
+        <div class="row d-flex justify-content-between mb-1">
+          <input type="button" value="7" onclick="solutionAdd()" class="col-3 button">
+          <input type="button" value="8" onclick="solutionAdd()" class="col-3 button">
+          <input type="button" value="9" onclick="solutionAdd()" class="col-3 button">
+          <input type="button" value="+" onclick="solutionAdd()" class="col-3 button">
+        </div>
+        <div class="row d-flex justify-content-between mb-1">
+          <input type="button" value="4" onclick="solutionAdd()" class="col-3 button">
+          <input type="button" value="5" onclick="solutionAdd()" class="col-3 button">
+          <input type="button" value="6" onclick="solutionAdd()" class="col-3 button">
+          <input type="button" value="-" onclick="solutionAdd()" class="col-3 button">
+        </div>
+        <div class="row d-flex justify-content-between mb-1">
+          <input type="button" value="1" onclick="solutionAdd()" class="col-3 button">
+          <input type="button" value="2" onclick="solutionAdd()" class="col-3 button">
+          <input type="button" value="3" onclick="solutionAdd()" class="col-3 button">
+          <input type="button" value="/" onclick="solutionAdd()" class="col-3 button">
+        </div>
+        <div class="row d-flex justify-content-between mb-1">
+          <input type="button" value="0" onclick="solutionAdd()" class="col-3 button">
+          <input type="button" value="." onclick="solutionAdd()" class="col-3 button">
+          <input type="button" value="=" onclick="solve()" class="col-3 button">
+          <input type="button" value="*" onclick="solutionAdd()" class="col-3 button">
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

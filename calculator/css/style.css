@@ -1,0 +1,17 @@
+.reset {
+    background: darkred;
+    color: white;
+    border-radius: 15px;
+    
+}
+
+.button {
+    color: white;
+    border-radius: 15px;
+    background-color: teal;
+    
+    
+}
+.calc {
+    width: 800px;
+}
