@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    
+    flex-direction: column;
+}
+.color_block {
+    width: 180px;
+    height: 100px;
+    background-color: grey;
+}
