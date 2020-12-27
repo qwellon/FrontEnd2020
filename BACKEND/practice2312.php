@@ -7,8 +7,11 @@
 $gconfile = file_get_contents('user.json');
 
 $array = json_decode($gconfile);
+echo "<pre>";
+print_r($array);
+echo "</pre>";
 
-var_dump($array);
+// var_dump($array);
 
 function getSecName()
 {
@@ -17,9 +20,9 @@ function getSecName()
     $secondNamesCount = [];
     $sameSecName = [];
 
-    // echo "<pre>";
-    // print_r($array);
-    // echo "</pre>";
+    echo "<pre>";
+    print_r($array);
+    echo "</pre>";
     foreach ($array as $key => $val) {
 
         $arrVal = explode(" ", $val['name']);
@@ -45,8 +48,37 @@ function getSecName()
     //var_dump($secondNamesCount);
 }
 
-getSecName();
-    
-    // if ($array["name"] == $array["name"]) {
-    //     var_dump($array["name"]);
+//getSecName();
+
+function getSameName()
+{
+    $gconfile = file_get_contents('user.json');
+    $array = json_decode($gconfile, true);
+    $sameNamesCount = [];
+    $sameName = [];
+    foreach ($array as $key => $val) {
+
+        $arrVal = $val['name'];
+        $sname = $arrVal;
+        if ($arrVal) {
+            $sameNamesCount[$sname] += 1;
+        }
+    }
+    foreach ($sameNamesCount as $key => $val) {
+        if ($sameNamesCount[$key] > 1) {
+            array_push($sameName, $key);
+        }
+    }
+
+    // foreach ($array as $key => $val) {
+    //     $arrVal = $val['name'];
+    //     if (in_array($arrVal[1], $sameName)) {
+    //         array_push($sameName, $key);
+    //     }
     // }
+    echo "<pre>";
+    print_r($sameName);
+    echo "</pre>";
+}
+
+getSameName();
