@@ -11,7 +11,7 @@ echo "<pre>";
 print_r($array);
 echo "</pre>";
 echo "<hr>";
-// var_dump($array);
+
 
 
 //- написать функцию, которая возвращает всех однофамильцев
@@ -21,10 +21,6 @@ function getSecName()
     $array = json_decode($gconfile, true);
     $secondNamesCount = [];
     $sameSecName = [];
-
-    echo "<pre>";
-    print_r($array);
-    echo "</pre>";
     foreach ($array as $key => $val) {
 
         $arrVal = explode(" ", $val['name']);
@@ -47,7 +43,6 @@ function getSecName()
     echo "<pre>";
     print_r($sameSecName);
     echo "</pre>";
-    //var_dump($secondNamesCount);
 }
 
 //getSecName();
@@ -59,6 +54,7 @@ function getSameName()
     $array = json_decode($gconfile, true);
     $sameNamesCount = [];
     $sameName = [];
+    echo "Список тезок: ";
     foreach ($array as $key => $val) {
 
         $arrVal = $val['name'];
@@ -72,13 +68,6 @@ function getSameName()
             array_push($sameName, $key);
         }
     }
-
-    // foreach ($array as $key => $val) {
-    //     $arrVal = $val['name'];
-    //     if (in_array($arrVal[1], $sameName)) {
-    //         array_push($sameName, $key);
-    //     }
-    // }
     echo "<pre>";
     print_r($sameName);
     echo "</pre>";
@@ -98,27 +87,6 @@ function getSomeAge($age)
             echo "</pre>";
         }
     }
-    // foreach ($array as $key => $val) {
-
-    //     $arrVal = $val['age'];
-    //     $sage = $arrVal;
-    //     if ($arrVal > 31) {
-    //         $sameAgeCount[$sname] += 1;
-    //     }
-    // }
-    // foreach ($sameAgeCount as $key => $val) {
-    //     if ($sameAgeCount[$key] > 1) {
-    //         array_push($someAge, $key);
-    //     }
-    // }
-
-    // foreach ($array as $key => $val) {
-    //     $arrVal = $val['name'];
-    //     if (in_array($arrVal[1], $sameName)) {
-    //         array_push($sameName, $key);
-    //     }
-    // }
-
 }
 
 //getSomeAge(31);
