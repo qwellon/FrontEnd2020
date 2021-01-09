@@ -81,25 +81,33 @@ function getSameName()
     echo "</pre>";
 }
 
-function getSomeAge()
+function getSomeAge($age)
 {
     $gconfile = file_get_contents('user.json');
     $array = json_decode($gconfile, true);
     $sameAgeCount = [];
     $someAge = [];
-    foreach ($array as $key => $val) {
 
-        $arrVal = $val['age'];
-        $sage = $arrVal;
-        if ($arrVal > 31) {
-            $sameAgeCount[$sname] += 1;
+    foreach ($array as $key => $value) {
+        if ($value['age'] > $age) {
+            echo "<pre>";
+            print_r($array[$key]);
+            echo "</pre>";
         }
     }
-    foreach ($sameAgeCount as $key => $val) {
-        if ($sameAgeCount[$key] > 1) {
-            array_push($someAge, $key);
-        }
-    }
+    // foreach ($array as $key => $val) {
+
+    //     $arrVal = $val['age'];
+    //     $sage = $arrVal;
+    //     if ($arrVal > 31) {
+    //         $sameAgeCount[$sname] += 1;
+    //     }
+    // }
+    // foreach ($sameAgeCount as $key => $val) {
+    //     if ($sameAgeCount[$key] > 1) {
+    //         array_push($someAge, $key);
+    //     }
+    // }
 
     // foreach ($array as $key => $val) {
     //     $arrVal = $val['name'];
