@@ -1,0 +1,11 @@
+1) id  name shop_name quantity(>5)
+
+SELECT products.id, products.name, stores.name AS store_name, quantity.quantity 
+FROM products JOIN quantity ON products.id =  quantity.product_id
+JOIN stores ON stores.id = quantity.store_id WHERE quantity.quantity > 5;
+
+2) id name sum_quantity
+
+SELECT products.name, COUNT(products.name) AS count, sum(quantity.quantity)
+FROM products JOIN quantity on products.id = quantity.product_id
+GROUP BY products.name;
