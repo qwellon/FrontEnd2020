@@ -27,6 +27,7 @@ $allProducts = $obj->getProducts();
                 <th>Price</th>
                 <th>Active</th>
                 <th>Description</th>
+                <th>Img path</th>
                 <th>Delete</th>
                 <th>Update</th>
             </tr>
@@ -40,6 +41,7 @@ $allProducts = $obj->getProducts();
                     <td><?= $val["price"] ?></td>
                     <td><?= $val["active"] ?></td>
                     <td><?= $val["description"] ?></td>
+                    <td><?= $val["img_path"] ?></td>
                     <td><button class="delete" data-id="<?= $val["id"] ?>">x</button></td>
                     <td><button class="update" data-id="<?= $val["id"] ?>">!</button></td>
                 </tr>
@@ -47,12 +49,17 @@ $allProducts = $obj->getProducts();
             endforeach; ?>
         </tbody>
     </table>
+    <form>
+        <input type="text">
+        <input type="submit">
+    </form>
 </body>
 <form class="form__add">
     <input type="text" name="Name" placeholder="Name">
     <input type="text" name="Price" placeholder="Price">
     <input type="text" name="Active" placeholder="Active">
     <input type="text" name="Description" placeholder="Descriprion">
+    <input type="file" name="img_path">
     <input type="submit">
 </form>
 
@@ -64,6 +71,7 @@ $allProducts = $obj->getProducts();
         <input type="text" name="Price">
         <input type="text" name="Active">
         <input type="text" name="Description">
+        <input type="file" name="img_path">
         <br>
         <input type="submit" name="submit">
     </form>

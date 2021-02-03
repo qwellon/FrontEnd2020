@@ -59,15 +59,21 @@ addButton.addEventListener("submit", function (e) {
         price: this.querySelector("input[name=Price]").value,
         active: this.querySelector("input[name=Active]").value,
         description: this.querySelector("input[name=Description]").value,
-        'img_path': "/"
+
+    }
+    let objFormData = new FormData();
+    objFormData.append('img_path', this.querySelector('input[name=img_path]').files[0]);
+    for (let item in fields) {
+        console.log(item);
+        objFormData.append(item, fields[item]);
     }
     let response = fetch('handle.php',
         {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json;charset=utf-8'
+                //'Content-Type': 'application/json;charset=utf-8'
             },
-            body: JSON.stringify(fields)
+            body: objFormData
         });
     // .then((response) => {
     //     return response.json();

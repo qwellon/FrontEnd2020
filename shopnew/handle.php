@@ -1,7 +1,11 @@
 <?php
 require('vendor/autoload.php');
 $request = json_decode(file_get_contents('php://input'), 1);
-
+if (empty($request)) {
+    $request = $_REQUEST;
+    $request['file'] = $_FILES['img_path'];
+}
+var_dump($_FILES);
 $obj = new \Eshop\Product();
 
 if ($request['method'] == 'update') {
