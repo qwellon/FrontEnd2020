@@ -1,0 +1,71 @@
+1-2 в изображении.
+ALTER TABLE product ADD INDEX( `idCategory`);
+INSERT INTO category (`id`, `Name`) VALUES (NULL, 'Канцелярия'), (NULL, 'Спорт');
+
+
+3. Написать запрос вставки данных в табличку User.
+Использовать запрос 10 раз.
+
+INSERT INTO user (id, Name) VALUES (NULL, 'Виктория');
+
+
+4. Написать запрос вставки данных в табличку Cart.
+Использовать запрос 10 раз.
+
+INSERT INTO cart (id, userId, productId) VALUES (NULL, '9', '3'), (NULL, '10', '4'), (NULL, '11', '2'), (NULL, '12', '3'), (NULL, '13', '1'), (NULL, '14', '2');
+
+
+5. Написать запросы для вывода:
+a) Всех пользователей;
+
+SELECT * FROM user WHERE 1
+
+b) Всех записей в корзине (выводить всю информацию
+о пользователе, всю информацию о продукте, всю
+информацию о категории);
+
+SELECT  user.Name, category.Name AS categoryName , product.Name AS Product, product.Price 
+FROM cart JOIN product on product.id = cart.productId
+JOIN user ON user.id = cart.userId
+JOIN  category ON product.idCategory = category.id; 
+
+
+
+c) Все записи в корзине (вывести имя пользователя,
+название категории и название продукта);
+
+SELECT  user.Name, category.Name AS categoryName , product.Name AS Product
+FROM cart JOIN product on product.id = cart.productId
+JOIN user ON user.id = cart.userId
+JOIN  category ON product.idCategory = category.id
+
+d)Всех продуктов, выбранных в корзине одним пользователем (выводить всю информацию о пользователе, продукт и категорию);
+e) Названий категорий, продукты которых добавлены
+в корзину одним пользователем;
+
+SELECT  category.Name AS categoryName , product.Name AS Product
+FROM cart 
+JOIN product on product.id = cart.productId
+JOIN  category ON product.idCategory = category.id
+JOIN user ON user.id = cart.userId
+WHERE userId IN (SELECT userId FROM cart GROUP BY userId HAVING COUNT(*) > 1)
+
+f) Информацию о всех пользователях, которые купили
+один продукт;
+
+SELECT  user.Name, category.Name AS categoryName , product.Name AS Product
+FROM cart 
+JOIN product on product.id = cart.productId
+JOIN  category ON product.idCategory = category.id
+JOIN user ON user.id = cart.userId
+WHERE userId IN (SELECT userId FROM cart GROUP BY userId HAVING COUNT(*) > 1)
+
+
+g) Информацию о категории, продуктов которой нет
+у пользователя в корзине
+
+SELECT  category.Name AS categoryName
+FROM product
+LEFT JOIN cart on product.id = cart.productId
+JOIN category ON category.id = product.idCategory
+WHERE cart.productId IS NULL
