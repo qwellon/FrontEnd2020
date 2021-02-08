@@ -20,11 +20,26 @@ SELECT AVG(product.Price) FROM product
 JOIN cart ON product.id = cart.productId
 
 5. Создать запрос, который посчитает количество каждого продукта в корзине для одного пользователя.
+
 6. Создать запрос, который выберет 3 самых дорогих
 продукта, которые все пользователи наибольшее количество раз клали в корзину.
+
+SELECT COUNT(in_cart.product_id) AS counter, in_cart.product_id FROM in_cart
+JOIN products ON products.id = in_cart.products_id
+GROUP BY product.price DESC
+ORDER BY counter DESC, products.price DESC
+LIMIT(3)
+
 7. Создать запрос, который отсортирует все продукты
 в корзине по количеству записей в корзине для всех
 пользователей.
+
+SELECT in_cart.product_id*in_cart AS counter, in_cart.product_id FROM in_cart
+JOIN products ON products.id = in_cart.products_id
+GROUP BY product.price DESC
+ORDER BY counter DESC, products.price DESC
+
+
 8. Создать запрос, который выведет пользователей, которые ничего не купили.
 9. Создать запрос, который выведет пользователя, который купил наибольшее количество одинаковых
 продуктов.
