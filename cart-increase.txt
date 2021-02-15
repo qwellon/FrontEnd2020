@@ -1,0 +1,69 @@
+Cart.php
+
+<tbody>
+
+        <? foreach ($cartData['products'] as $item): ?>
+        <tr data-recordId="<?= $item['rid'] ?>">
+            <td><?= $item['name'] ?></td>
+            <td>
+                <span class="decrease-quantity">-</span>
+                <span><?= $item['quantity'] ?></span>
+                <button class="increase-quantity">+</button>
+            </td>
+            <td><?= $item['price'] ?></td>
+            <td><button class="delete-record">Удалить</button></td>
+        </tr>
+        <? endforeach; ?>
+    </tbody>
+
+<...>
+
+<scritp>
+
+let increaseButton = document.querySelectorAll(".increase-quantity");
+    increaseButton.forEach(function(elemButton) {
+        elemButton.addEventListener('click', function(e) {
+            let parentTr = this.closest('tr');
+            let recordId = parentTr.dataset.recordid;
+            console.log(recordId);
+            let params = {
+                id: recordId,
+                method: 'increaseQuantity'
+            }
+            let response = fetch('/handle.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json;charset=utf-8'
+                    },
+                    body: JSON.stringify(params)
+                })
+                .then((response) => {
+                    return response.json();
+                })
+                .then((data) => {
+                    console.log(data)
+                    let totalData = document.querySelector('.total-data').innerHTML = data.totalPrice;
+
+                });
+        })
+
+    })
+</script>
+_________________________________________________________________________________
+
+/handle.php
+
+elseif ($request['method'] == 'increaseQuantity') {
+    $resultIncreaseQuantity = $objCart->increaseQuantity($request['id']);
+}
+________________________________________________________________________________
+
+Cart.php
+
+public function increaseQuantity($inCartId)
+    {
+        $query = "UPDATE {$this->cartProductTable} SET quantity = quantity + 1 WHERE id = {$inCartId}";
+        return $this->db->query($query);
+    }
+
+_______________________________________________________________________________
