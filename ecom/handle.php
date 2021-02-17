@@ -43,4 +43,7 @@ if ($request['method'] == 'update') {
     $resultIncreaseQuantity = $objCart->decreaseQuantity($request['id']);
     $getCurrentCart = $objCart->getCartData();
     echo json_encode(['result' => true, 'totalPrice' => $getCurrentCart['total_price']]);
+} elseif ($request['method'] == 'addOrder') {
+    $objOrder = new \Eshop\Order($request['user']);
+    $resultAddOrder = $objOrder->createOrder($request['user'], $request['cart'], $request['address']);
 }

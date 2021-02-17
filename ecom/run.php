@@ -5,7 +5,10 @@ $user = 1;
 try {
     $obj = new \Eshop\Order($user);
     //$obj->createCart
-    $obj->createOrder($user, 2, 'Kurkovaya 11');
+    $res = $obj->deleteOrder($user);
+    echo "<pre>";
+    var_dump($res);
+    echo "</pre>";
     //$obj->getCartData();
 } catch (Exception $e) {
     var_dump($e->getMessage());

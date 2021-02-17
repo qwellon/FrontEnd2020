@@ -20,6 +20,21 @@ $cartData = $objCart->getCartData();
         display: none;
 
     }
+
+    .order {
+        width: 300px;
+        background-color: greenyellow;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        padding: 30px;
+
+    }
+
+    .order input {
+        padding: 5px;
+        margin: 10px;
+    }
 </style>
 <table>
     <thead>
@@ -51,10 +66,16 @@ $cartData = $objCart->getCartData();
     Итоговая цена: <span class="total-data"><?= $cartData['total_price'] ?></span>
 </div>
 
-<form id="product-add">
-    <input type="text" name="cartId">
-    <input type="text" name="ProductName">
+
+<form id="order" class="order">
+    <input type="text" name="userId" placeholder="User id">
+    <input type="text" name="address" placeholder="Адрес"> <br>
+    <input type="submit" class="new-order" value="Оформить"> <br>
+    <input type="submit" value="Оплатить">
+
+
 </form>
+
 </div>
 <script>
     let deleteButtons = document.querySelectorAll('.delete-record');
@@ -116,7 +137,8 @@ $cartData = $objCart->getCartData();
 
     let decreaseButton = document.querySelectorAll(".decrease-quantity");
     decreaseButton.forEach(function(elemButton) {
-        elemButton.addEventListener('click', function(e) {
+        elemButton.addEventListener('submit', function(e) {
+            e.preventDefault();
             let parentTr = this.closest('tr');
             let recordId = parentTr.dataset.recordid;
             console.log(recordId);
@@ -141,5 +163,29 @@ $cartData = $objCart->getCartData();
                 });
         })
 
+    })
+    const formAddOrder = decument.querySelectorAll('#order');
+    formAddOrder.addEventListener("submit", function(e) {
+        let params = {
+            method: 'addOrder',
+            user: this.querySelector("input[name=userId]").value,
+            address: this.querySelector("input[name=address]").value,
+            card: 2,
+        }
+        let response = fetch('/handle.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                },
+                body: JSON.stringify(params)
+            })
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data)
+                let totalData = document.querySelector('.total-data').innerHTML = data.totalPrice;
+
+            });
     })
 </script>
